@@ -5,15 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
 
-  <title>{{ site.name }} {{ page.title }} page</title>
+  <title>{{ site.name }} {{ page.title }}</title>
 
-  <link rel="stylesheet" href="css/main.css" />{% if page.title == "pattern library" %}
-  <link rel="stylesheet" href="css/pattern-library.css" />{% endif %}
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pattern-library.css" />
 </head>
-{% if page.title == 'patchwork' %}<body>
-{% for pattern in page.patterns %}{{ pattern.content }}{% endfor %}
-{% else %}<body class="pl-main">
-  <h1 class="pl-h1">{{ site.name }} {{ page.title }} page</h1>
+<body{% if page.title == 'pattern library'%} class="pl-main"{% endif %}>
+  <h1 class="pl-h1">{{ site.name }} {{ page.title }}</h1>
 
   <div class="pl-nav">
     <a class="pl-link" href="/">{{ site.name }}</a>
@@ -38,6 +36,5 @@
 {% endfor %}
   </section>
 {% endfor%}
-
-{% endif %}</body>
+</body>
 </html>

@@ -83,8 +83,7 @@ module Jekyll
         'id' => id,
         'markup_escaped' => markup_escaped,
         'markup' => content,
-        'section' => section,
-        'usage' => usage
+        'section' => section
       })
     end
 

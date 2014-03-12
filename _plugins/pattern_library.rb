@@ -25,13 +25,12 @@ module Jekyll
       self.data = {
         'layout' => 'pattern_library',
         'patterns' => patterns,
-        'title' => name,
-        'sections' => pattern_attr_hash('section')
+        'sections' => pattern_attr_hash('section'),
+        'title' => name
       }
-
     end
 
-    # Construct a Hash of Posts indexed by the specified Pattern attribute.
+    # Construct a Hash of Patterns indexed by the specified Pattern attribute.
     #
     # pattern_attr - The String name of the Pattern attribute.
     #
@@ -61,6 +60,7 @@ module Jekyll
   # The PatternLibraryGenerator class generates content related to
   # patterns in the _patterns directory.
   class PatternLibraryGenerator < Generator
+    safe false
     # Generates pattern library pages.
     #
     # site - The current Site instance.
@@ -69,7 +69,6 @@ module Jekyll
     def generate(site)
       patterns = read_content(site, '', '_patterns', Pattern)
 
-      site.pages << LibraryPage.new(site, 'patchwork', patterns)
       site.pages << LibraryPage.new(site, 'pattern library', patterns)
     end
 
