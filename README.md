@@ -6,24 +6,7 @@ your website running with jekyll.
 ## Install
 
 1. Download the project zip file.
-2. Copy/paste files from _layouts, _plugins and css directories to respectively
-   the same directories in your jekyll project. Create the _plugins directory
-   if doesn't exist yet.
-3. Create a _patterns directory at the project root and add patterns into
-   separate HTML files. You can add a YAML Front-matter blocks on top of those
-   files.
-
-## Configurations
-
-You can change alter the configuration by modifying the `generate` method
-inside the _plugins/pattern_library.rb file.
-
-The `patterns = read_content(site, '', '_patterns', Pattern)` list all patterns
-inside the `_patterns` directory.
-
-Then, the `site.pages << LibraryPage.new(site, <page_name>, patterns)` lines
-register the pages that jekyll will generate. You can change the `<page_name`
-part as you want.
+2. Copy/paste files (or directories if they don't exist yet).
 
 ## Front-matter variables
 
@@ -39,7 +22,7 @@ Generated variables :
 **The following variables are recognised but not required.**
 
 `section`: This variable points out a section which the pattern belongs to,
-            and add the pattern to the page sections list.
+           and add the pattern to the page sections list.
 
 ### Page variables
 
@@ -53,7 +36,6 @@ Generated variables :
 ## To do
 
 - [ ] Review the Pattern.destination method.
-- [ ] Add template pages.
 
 ## Colophon
 
