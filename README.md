@@ -19,7 +19,8 @@ your layout.**
 
 Generated variables :
 
-- `id`: The pattern filename without the `.html` extension.
+`id`
+:   The pattern filename without the `.html` extension.
 - `markup`: The pattern HTML markup.
 - `markup_escaped`: The HTML escaped version of the markup. Its usefull for
                   `<code>` blocks.
@@ -40,5 +41,5 @@ Generated variables :
 
 ## To do
 
-- [ ] Review the Pattern.destination method.
-- [ ] Add a better layout
+- Review the Pattern.destination method.
+- Add a better layout
