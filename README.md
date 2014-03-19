@@ -1,7 +1,7 @@
 # Pattern library plugin
 
 It helps you to generate a pattern library from UI components you develop for
-your website running with jekyll.
+your jekyll website.
 
 ## Install
 
@@ -10,7 +10,12 @@ your website running with jekyll.
 
 ## Front-matter variables
 
+Here is a list of special variables recognised by the plugin.
+
 ### Pattern variable
+
+**As for posts, add any other variables in the Front-matter and use them in
+your layout.**
 
 Generated variables :
 
@@ -19,7 +24,7 @@ Generated variables :
 - `markup_escaped`: The HTML escaped version of the markup. Its usefull for
                   `<code>` blocks.
 
-**The following variables are recognised but not required.**
+The following variables are recognised but not required.
 
 `section`: This variable points out a section which the pattern belongs to,
            and add the pattern to the page sections list.
@@ -36,8 +41,4 @@ Generated variables :
 ## To do
 
 - [ ] Review the Pattern.destination method.
-
-## Colophon
-
-The layout is highly inspired from the A List Appart pattern library page.
-Note : I have to ask @maban the right to use it.
+- [ ] Add a better layout
